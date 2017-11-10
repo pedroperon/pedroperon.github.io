@@ -1,0 +1,1 @@
+master ns1-plesk4.minas.com.br / slave1 ns2-plesk4.minas.com.br
