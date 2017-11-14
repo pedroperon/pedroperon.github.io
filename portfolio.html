@@ -76,8 +76,12 @@
 		</div>
 
 
-		<div class="footer">
-			© pedro peron 2012
+		<div class="footer" id="date">
+			<script>
+				n = new Date();
+				y = n.getFullYear();
+				document.getElementById("date").innerHTML = "© pedro peron " + y;
+			</script>
 		</div>
 
 	</div>

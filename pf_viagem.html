@@ -104,8 +104,8 @@
 			</div>
 
 			<script>
-				$("#gallery").galleria({					
-width: 780,
+				$("#gallery").galleria({
+					width: 780,
 					height: 520,
 					background: "#FFFFFF",
 					lightbox: true,
@@ -116,8 +116,12 @@ width: 780,
 
 		</div>
 
-		<div class="footer">
-			© pedro peron 2012
+		<div class="footer" id="date">
+			<script>
+				n = new Date();
+				y = n.getFullYear();
+				document.getElementById("date").innerHTML = "© pedro peron " + y;
+			</script>
 		</div>
 
 	</div>

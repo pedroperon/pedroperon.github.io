@@ -34,8 +34,12 @@
                 <img width="780" height="520" title="pedro peron fotografia; copyright 2012" src="img/coverimage.jpg" border="0">
             </a>
         </div>
-        <div class="footer">
-            © pedro peron 2012
+        <div class="footer" id="date">
+            <script>
+                n = new Date();
+                y = n.getFullYear();
+                document.getElementById("date").innerHTML = "© pedro peron " + y;
+            </script>
         </div>
     </div>
 </body>
