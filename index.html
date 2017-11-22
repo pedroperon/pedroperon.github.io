@@ -8,25 +8,33 @@
 </head>
 
 <body>
-    <div class="mainWindow">
+    <div id="mainWndw" class="mainWindow">
 
         <div class="header">
 
             <a href="index.html">
                 <img src="img/logo.png" alt="Logo" title="pedro peron fotografia" width="150" height="80" border="0">
             </a>
-            <ul>
-                <li>
+            <ul id="headerBar">
+                <li id="sobreBtn">
                     <a class="white" href="sobre.html">sobre</a>
                 </li>
-                <li>
+                <li id="portifolioBtn">
                     <a class="white" href="portfolio.html">portf&oacute;lio</a>
                 </li>
-                <li>
+                <li id="contatoBtn">
                     <a class="white" href="contato.html">contato</a>
                 </li>
             </ul>
-
+            <script>
+            var w = window.innerWidth;
+            var wLogo = 150;
+            document.getElementsByClassName("mainWindow")[0].style.width = w+"px";
+            document.getElementById("headerBar").style.width = (w-wLogo)+"px";
+            document.getElementById("sobreBtn").style.width = ((w-wLogo)/3)+"px";
+            document.getElementById("portifolioBtn").style.width = ((w-wLogo)/3)+"px";
+            document.getElementById("contatoBtn").style.width = ((w-wLogo)/3)+"px";
+            </script>
         </div>
 
         <div class="content">
