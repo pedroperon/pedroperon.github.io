@@ -38,19 +38,19 @@ var openGallery = function () {
     }
     );
 
-    // build items array
-    var items = [
-        {
-            src: 'img/portfolio/gente/pedroperon_gente-1.jpg',
-            w: 1000,
-            h: 667
-        },
-        {
-            src: 'img/portfolio/gente/pedroperon_gente-2.jpg',
-            w: 1000,
-            h: 667
-        }
-    ];
+    // // build items array
+    // var items = [
+    //     {
+    //         src: 'img/portfolio/gente/pedroperon_gente-1.jpg',
+    //         w: 1000,
+    //         h: 667
+    //     },
+    //     {
+    //         src: 'img/portfolio/gente/pedroperon_gente-2.jpg',
+    //         w: 1000,
+    //         h: 667
+    //     }
+    // ];
 
     // // define options (if needed)
     // var options = {
@@ -74,7 +74,7 @@ var getJSON = function (url, callback) {
     // so para testar: funciona com url remota, nao com caminho local. Por que?
     xhr.open(
         'GET',
-        "http://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=json",
+        "img/galleryPeople.json",//"http://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=json",
         true);
     xhr.responseType = 'json';
     xhr.onload = function() {
