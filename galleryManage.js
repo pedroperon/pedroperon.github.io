@@ -3,16 +3,10 @@ var openGallery = function () {
 
     var galleryName = this.id;
 
-    // var jsonResponse = Get('img/' + galleryName + '.json');
-
-    var jsonResponse = getJSON('img/' + galleryName + '.json', function (err, data) {
+    var jsonResponse = getJSON('https://pedroperon.github.io/img/' + galleryName + '.json', function (err, jsonGallery) {
         if (err !== null) {
             alert('Something went wrong: ' + err);
-        } else {
-            // alert('Your query count: ' + data.count);
-
-            var jsonGallery = JSON.parse(data);
-
+        } else {            
             //   constroi array com itens da galeria
             var galleryItems = [];
             for (var i = 0; i < jsonGallery.images.length; i++) {
@@ -74,7 +68,7 @@ var getJSON = function (url, callback) {
     // so para testar: funciona com url remota, nao com caminho local. Por que?
     xhr.open(
         'GET',
-        "img/galleryPeople.json",//"http://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=json",
+        url,
         true);
     xhr.responseType = 'json';
     xhr.onload = function() {
