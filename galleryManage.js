@@ -32,31 +32,6 @@ var openGallery = function () {
     }
     );
 
-    // // build items array
-    // var items = [
-    //     {
-    //         src: 'img/portfolio/gente/pedroperon_gente-1.jpg',
-    //         w: 1000,
-    //         h: 667
-    //     },
-    //     {
-    //         src: 'img/portfolio/gente/pedroperon_gente-2.jpg',
-    //         w: 1000,
-    //         h: 667
-    //     }
-    // ];
-
-    // // define options (if needed)
-    // var options = {
-    //     // optionName: 'option value'
-    //     // for example:
-    //     index: 0 // start at first slide
-    // };
-
-    // // Initializes and opens PhotoSwipe
-    // var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, galleryItems, options);
-    // gallery.init();
-
     // If you don't want the link to actually 
     // redirect the browser to another page,
     // return false at the end of this block.
