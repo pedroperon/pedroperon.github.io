@@ -21,6 +21,8 @@
 	<script src="PhotoSwipe/dist/photoswipe.min.js"></script>
 	<!-- UI JS file -->
 	<script src="PhotoSwipe/dist/photoswipe-ui-default.min.js"></script>
+
+	<script src="galleryManage.js"></script>
 </head>
 
 <body>
@@ -51,14 +53,14 @@
 				<tr style="text-align:center">
 
 					<td style="width:50%">
-						<a id="gente" name="btnGallery" class="grey" href="pf_gente.html">
+						<a id="galleryPeople" name="btnGallery" class="grey" href="pf_gente.html">
 							<img src="img/portfolio/thumb_gente.jpg" alt="Fotografia de Gente" title="gente" width="300" height="200" border="1">
 							<br>gente
 						</a>
 					</td>
 
 					<td style="width:50%">
-						<a id="casamento" name="btnGallery" class="grey" href="pf_casamento.html">
+						<a id="galleryWedding" name="btnGallery" class="grey" href="pf_casamento.html">
 							<img src="img/portfolio/thumb_casamento.jpg" alt="Fotografia de Casamento" title="casamento" width="300" height="200" border="1">
 							<br>casamento
 						</a>
@@ -69,14 +71,14 @@
 				<tr style="text-align:center">
 
 					<td style="width:50%">
-						<a id="musica" name="btnGallery" class="grey" href="pf_musica.html">
+						<a id="galleryMusic" name="btnGallery" class="grey" href="pf_musica.html">
 							<img src="img/portfolio/thumb_musica.jpg" alt="Fotografia de Musica" title="m&uacute;sica" width="300" height="200" border="1">
 							<br>m&uacute;sica
 						</a>
 					</td>
 
 					<td style="width:50%">
-						<a id="viagem" name="btnGallery" class="grey" href="pf_viagem.html">
+						<a id="galleryTravel" name="btnGallery" class="grey" href="pf_viagem.html">
 							<img src="img/portfolio/thumb_viagem.jpg" alt="Fotografia de Viagem" title="viagem" width="300" height="200" border="1">
 							<br>viagem
 						</a>
@@ -179,7 +181,7 @@
 		var a = document.getElementsByName("btnGallery");
 		for (var i = 0; i < a.length; i++) {
 			var galleryName = a[i].id;
-			a[i].onclick = openGallery;//(galleryName);
+			a[i].onclick = openGallery;
 		}
 
 		//   () {
@@ -197,39 +199,4 @@
 		//   }
 	}
 
-	var openGallery = function () {
-		var pswpElement = document.querySelectorAll('.pswp')[0];
-		
-		var galleryName = this.id;
-
-		// build items array
-		var items = [
-			{
-				src: 'img/portfolio/gente/pedroperon_gente-1.jpg',
-				w: 1000,
-				h: 667
-			},
-			{
-				src: 'img/portfolio/gente/pedroperon_gente-2.jpg',
-				w: 1000,
-				h: 667
-			}
-		];
-
-		// define options (if needed)
-		var options = {
-			// optionName: 'option value'
-			// for example:
-			index: 0 // start at first slide
-		};
-
-		// Initializes and opens PhotoSwipe
-		var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-		gallery.init();
-
-		// If you don't want the link to actually 
-		// redirect the browser to another page,
-		// return false at the end of this block.
-		return false;
-	};
 </script>
